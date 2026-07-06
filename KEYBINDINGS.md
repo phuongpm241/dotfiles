@@ -121,6 +121,25 @@ Opened via `<leader>cd`. Useful built-in keys:
 
 ---
 
+## Obsidian (obsidian.nvim)
+
+Commands (active in markdown files inside the vault). Completion for `[[wiki-links]]`, tags, etc. is served by the built-in `obsidian-ls` LSP and appears in the native completion menu.
+
+| Command | What it does |
+|---|---|
+| `:Obsidian new` | Create a new note (in the vault root) |
+| `:Obsidian today` | Open/create today's daily note (`Areas/SecondBrain/`) |
+| `:Obsidian template` | Insert a template from the `templates/` folder |
+| `:Obsidian search` | Grep the vault (via Telescope) |
+| `:Obsidian quick_switch` | Fuzzy-jump to a note (via Telescope) |
+| `:Obsidian follow_link` | Follow the link under the cursor |
+| `:Obsidian backlinks` | Show notes linking to the current one |
+| `:Obsidian toggle_checkbox` | Toggle a `- [ ]` / `- [x]` checkbox |
+
+Vault: `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/michelle_vault`.
+
+---
+
 ## Handy commands (not keybindings)
 
 | Command | What it does |

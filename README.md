@@ -22,6 +22,7 @@ dotfiles/
 │           ├── telescope.lua   # fuzzy finder (needs ripgrep)
 │           ├── treesitter.lua  # syntax parsers (needs tree-sitter CLI)
 │           ├── lsp.lua         # Mason + nvim-lspconfig + native completion
+│           ├── obsidian.lua    # obsidian.nvim — Obsidian vault integration
 │           └── vimfugitive.lua # git integration
 ├── wezterm/                # → symlinked to ~/.config/wezterm
 │   ├── wezterm.lua         # references the wallpaper via wezterm.config_dir
