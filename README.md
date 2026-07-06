@@ -94,8 +94,10 @@ git push
 
 On another machine, `git pull` and the symlinks pick up the changes immediately.
 
-## Key mappings (reference)
+## Key mappings
 
-- **Neovim leader**: `<Space>`. `<leader>ff` find files, `<leader>fg` live grep, `<leader>fb` buffers, `<leader>fh` help, `<leader>cd` file explorer (netrw).
-- **LSP** (Neovim 0.12 defaults): `K` hover, `gd` definition, `grn` rename, `gra` code action, `grr` references, `]d`/`[d` next/prev diagnostic. Completion auto-triggers in insert mode; accept with `Ctrl-y`.
-- **tmux prefix**: `Ctrl-s`. `prefix + r` reloads config; `h`/`j`/`u`/`n` switch panes; `prefix + s` prompts for a session name; `prefix + I` installs plugins.
+See **[KEYBINDINGS.md](KEYBINDINGS.md)** for the full reference (tmux, Neovim, Telescope, LSP, completion, netrw). Quick highlights:
+
+- **Neovim leader**: `<Space>`. `<leader>ff` find files, `<leader>fg` live grep, `<leader>cd` file explorer.
+- **LSP** (Neovim 0.12 defaults): `K` hover, `grn` rename, `gra` code action, `grr` references, `]d`/`[d` diagnostics. Completion auto-triggers; accept with `Ctrl-y`.
+- **tmux prefix**: `Ctrl-s`. `prefix + r` reloads config; `h`/`j`/`u`/`n` switch panes; `prefix + I` installs plugins.
