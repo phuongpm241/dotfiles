@@ -15,20 +15,25 @@ A reference for every shortcut in this setup. Verified against the actual config
 |---|---|---|
 | `Ctrl-s` | Prefix (all bindings below start with it unless noted) | custom |
 | `prefix` → `r` | Reload `~/.tmux.conf` | custom |
-| `prefix` → `h` | Select pane to the **left** | custom |
-| `prefix` → `j` | Select pane **down** | custom |
+| `prefix` → `h` | Select pane **left** | custom |
+| `prefix` → `j` | Select pane **right** | custom |
 | `prefix` → `u` | Select pane **up** | custom |
-| `prefix` → `n` | Select pane to the **right** | custom |
+| `prefix` → `n` | Select pane **down** | custom |
+| `prefix` → `H` | Resize pane **left** (repeatable — keep tapping) | custom |
+| `prefix` → `J` | Resize pane **right** (repeatable) | custom |
+| `prefix` → `U` | Resize pane **up** (repeatable) | custom |
+| `prefix` → `N` | Resize pane **down** (repeatable) | custom |
 | `prefix` → `s` | Prompt for a session name, create/attach it | custom |
 | `prefix` → `I` | Install tmux plugins (tpm) | tpm |
-| `prefix` → `U` | Update tmux plugins | tpm |
 | `prefix` → `[` | Enter copy mode (then use vi motions) | default |
 | `Ctrl-h` / `Ctrl-j` / `Ctrl-k` / `Ctrl-l` | Move between panes **without** prefix | vim-tmux-navigator |
+
+**Direction scheme**: lowercase `h/j/u/n` selects panes, uppercase `H/J/U/N` resizes them — both map to **left / right / up / down** respectively. Resize bindings are repeatable (`-r`): after the prefix you can tap the key several times within ~0.5s to keep nudging the border.
 
 **Copy mode** is vi-style (`mode-keys vi`): after `prefix [`, move with `h/j/k/l`, start selection with `v` (or `Space`), yank with `y` (or `Enter`), and `q` to quit.
 
 > **Notes**
-> - Pane selection uses `h/j/u/n` (not the usual `h/j/k/l`) — `u`=up, `n`=right, matching this config.
+> - `prefix + U` is **reclaimed for resize**, overriding tpm's default "update plugins" binding. To update tmux plugins now, run `~/.tmux/plugins/tpm/bin/update_plugins all` (installing new ones with `prefix + I` still works).
 > - `vim-tmux-navigator` is installed on the **tmux** side, giving `Ctrl-h/j/k/l` pane movement. Its Neovim counterpart plugin is **not** installed, so inside Neovim those chords don't yet jump between splits — add `christoomey/vim-tmux-navigator` to nvim later if you want seamless nvim↔tmux navigation.
 
 ---
