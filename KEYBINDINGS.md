@@ -24,6 +24,7 @@ A reference for every shortcut in this setup. Verified against the actual config
 | `prefix` → `U` | Resize pane **up** (repeatable) | custom |
 | `prefix` → `N` | Resize pane **down** (repeatable) | custom |
 | `prefix` → `s` | Prompt for a session name, create/attach it | custom |
+| `prefix` → `$` | Rename the current session | default |
 | `prefix` → `I` | Install tmux plugins (tpm) | tpm |
 | `prefix` → `[` | Enter copy mode (then use vi motions) | default |
 | `Ctrl-h` / `Ctrl-j` / `Ctrl-k` / `Ctrl-l` | Move between panes **without** prefix | vim-tmux-navigator |
@@ -43,7 +44,25 @@ A reference for every shortcut in this setup. Verified against the actual config
 | Keys | Action | Source |
 |---|---|---|
 | `Space` | Leader key | custom |
-| `<leader>cd` | Open file explorer (netrw `:Ex`) | custom |
+| `<leader>e` | Toggle the file-tree sidebar (neo-tree) | custom |
+| `<leader>cd` | Open file explorer (netrw `:Ex`) — legacy fallback | custom |
+
+---
+
+## Neovim — file tree & editor tabs (neo-tree + bufferline)
+
+The neo-tree sidebar docks on the **left** and is toggle-only (it never opens on startup). Open files show as tabs across the top via bufferline.
+
+| Keys | Action | Source |
+|---|---|---|
+| `<leader>e` | Toggle the file-tree sidebar | custom |
+| `Shift-l` | Next editor tab | custom |
+| `Shift-h` | Previous editor tab | custom |
+| `<leader>bd` | Close the current buffer/tab | custom |
+
+**Inside the neo-tree sidebar** (common default keys): `Enter` open, `a` add file (`a` then a trailing `/` makes a directory), `d` delete, `r` rename, `c` copy, `x` cut, `p` paste, `R` refresh, `H` toggle hidden files, `?` show all mappings.
+
+> `Shift-h` / `Shift-l` override Vim's default `H` / `L` (jump to top / bottom of the visible screen) in normal mode.
 
 ---
 
@@ -141,7 +160,7 @@ Commands (active in markdown files inside the vault). Completion for `[[wiki-lin
 | `:Obsidian backlinks` | Show notes linking to the current one |
 | `:Obsidian toggle_checkbox` | Toggle a `- [ ]` / `- [x]` checkbox |
 
-Vault: `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/michelle_vault`.
+Vault: `~/obsidian_vault`.
 
 ---
 
