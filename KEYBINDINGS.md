@@ -45,6 +45,7 @@ A reference for every shortcut in this setup. Verified against the actual config
 |---|---|---|
 | `Space` | Leader key | custom |
 | `<leader>e` | Toggle the file-tree sidebar (neo-tree) | custom |
+| `<leader>yp` | Yank the current file's full path to the clipboard | custom |
 | `<leader>cd` | Open file explorer (netrw `:Ex`) — legacy fallback | custom |
 
 ---
@@ -152,7 +153,7 @@ Commands (active in markdown files inside the vault). Completion for `[[wiki-lin
 | Command | What it does |
 |---|---|
 | `:Obsidian new` | Create a new note (in the vault root) |
-| `:Obsidian today` | Open/create today's daily note (`Areas/SecondBrain/`) |
+| `:Obsidian today` | Open/create today's daily note (`Areas/secondbrain/`) |
 | `:Obsidian template` | Insert a template from the `templates/` folder |
 | `:Obsidian search` | Grep the vault (via Telescope) |
 | `:Obsidian quick_switch` | Fuzzy-jump to a note (via Telescope) |

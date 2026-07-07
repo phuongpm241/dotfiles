@@ -25,7 +25,7 @@ return {
         },
 
         daily_notes = {
-            folder = 'Areas/SecondBrain',
+            folder = 'Areas/secondbrain',
             date_format = '%Y-%m-%d',
         },
 
