@@ -1,4 +1,5 @@
 vim.opt.number = true
+vim.opt.termguicolors = true -- 24-bit color, required for bufferline tabs + tokyonight
 vim.opt.cursorline = true
 vim.opt.relativenumber = true
 vim.opt.shiftwidth = 4
