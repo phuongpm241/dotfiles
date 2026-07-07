@@ -95,10 +95,25 @@ git push
 
 On another machine, `git pull` and the symlinks pick up the changes immediately.
 
+## Future upgrades
+
+Optional tweaks to make the neo-tree sidebar behave even more like VSCode/Cursor. Both live in `nvim/lua/plugins/neo-tree.lua`:
+
+- **Auto-reveal the active file** — flip `follow_current_file.enabled = true`. The sidebar then highlights and scrolls to whichever file you're editing (VSCode's "reveal active file" behavior).
+- **Auto-open the sidebar on startup** — add a `VimEnter` autocmd that runs `:Neotree show left` so the tree is already docked when nvim launches, instead of toggle-only. For example:
+
+  ```lua
+  vim.api.nvim_create_autocmd('VimEnter', {
+      callback = function() vim.cmd('Neotree show left') end,
+  })
+  ```
+
+Both are intentionally left off by default to keep startup fast and Vim-like.
+
 ## Key mappings
 
-See **[KEYBINDINGS.md](KEYBINDINGS.md)** for the full reference (tmux, Neovim, Telescope, LSP, completion, netrw). Quick highlights:
+See **[KEYBINDINGS.md](KEYBINDINGS.md)** for the full reference (tmux, Neovim, Telescope, LSP, completion, file tree, tabs). Quick highlights:
 
-- **Neovim leader**: `<Space>`. `<leader>ff` find files, `<leader>fg` live grep, `<leader>cd` file explorer.
+- **Neovim leader**: `<Space>`. `<leader>e` toggle file-tree sidebar, `<leader>ff` find files, `<leader>fg` live grep. `Shift-h`/`Shift-l` switch editor tabs.
 - **LSP** (Neovim 0.12 defaults): `K` hover, `grn` rename, `gra` code action, `grr` references, `]d`/`[d` diagnostics. Completion auto-triggers; accept with `Ctrl-y`.
-- **tmux prefix**: `Ctrl-s`. `prefix + r` reloads config; `h`/`j`/`u`/`n` switch panes; `prefix + I` installs plugins.
+- **tmux prefix**: `Ctrl-s`. `prefix + r` reloads config; `h`/`j`/`u`/`n` switch panes; `prefix + $` renames the session; `prefix + I` installs plugins.
