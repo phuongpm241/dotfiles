@@ -4,6 +4,7 @@ return {
     lazy = false,
     dependencies = {
         'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope.nvim', -- must be on rtp before obsidian resolves its picker
     },
     opts = {
         legacy_commands = false,
